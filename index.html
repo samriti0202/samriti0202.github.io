@@ -9,7 +9,7 @@
 <script type="text/javascript">
 
 function showData(){
-	t = d3.csv("presidents.csv",function(data) {
+	t = d3.csv("https://raw.githubusercontent.com/samriti0202/samriti0202.github.io/master/presidents.csvs.csv",function(data) {
 	var columns = ['Name','Height','Weight'];
     renderFullData(data,columns); });
 }
@@ -45,7 +45,7 @@ function clear() {
 function searchAndDisplayData(){
   clear()
   var pres = document.getElementById('pres_id').value
-  var github = 'presidents.csv'
+  var github = 'https://raw.githubusercontent.com/samriti0202/samriti0202.github.io/master/presidents.csv'
   var t = d3.csv(github,function (data) {
     var columns = ['Name','Height','Weight'];
 	var subset = data.filter( function(d){ return String(d.Name) == pres });	
